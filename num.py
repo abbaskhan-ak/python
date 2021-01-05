@@ -4,6 +4,10 @@ import numpy as np
 # arry= np.array([[[1,2,3],[4,5,6],[7,8,9]],[[10,11,12],[13,14,15],[16,17,18]],[[19,20,21],[22,23,24],[25,26,27]]])
 # print(arry)
 # print(arry.shape)
+# print(arry[2,2])  #2,2 ki location par jo number hoga wo print hoga
+# print(arry[0:])
+
+
 
 # q = np.array(["tariq","noman","ahmad","abbas"])
 # print(q)
@@ -102,7 +106,7 @@ import numpy as np
 
 
 
-# o=np.array([2,3,4,5,6,7,8,9])
+# o=np.array([1,2,3,4,5,6,7,8])
 # t=o.reshape(2,2,2)
 # print(o)
 # print(t)
@@ -124,8 +128,112 @@ import numpy as np
 
 
 
-a=np.array(range(1,101))
-b=a.reshape(5,5,4)
-print(b)
-print(a)
+# a=np.array(range(1,101))
+# b=a.reshape(5,5,4)
+# print(b)
+# print(a)
+
+# a=np.array([1,2,3,4,5,6])
+# a=np.array([[2,3],[3,5]])
+# b=a.reshape(2,2)
+# for x in a:
+#     print(x)
+
+
+# c=np.array([1,2,3,4,5,6,7,8])
+# d=c.reshape(2,2,2)
+# print(d)
+# for y in d:
+#     print(y)
+
+# for x in np.nditer(d):    #nditer=Ndimension iteration issay har element alag alag line may ajai ga
+#     print(x)
+
+
+
+# q=np.array([range(100)])
+# print(q)
+# # for x in np.nditer(q):   #ndier say alg line may agaya
+# #     print(x)
+
+
+# for x in np.nditer(q[:,::4]):   #isjka matlab 2 k step say
+#     print(x)
+
+
+
+
+# y=np.array([[2,4,5,7],[8,9,6,4]])
+# print(y)
+
+# for id, x in np.ndenumerate(y):   #is say har element ki position pata chalti ha agar bara array ha or kisi element ki position find karni hoto yay use hoga
+#     print(id,x)
+
+
+# o=np.array([1,2,3,4,5,6,7,8,9])
+# b=o.reshape(1,3,3)
+# print(b)
+# for id , x in np.ndenumerate(b):
+#     print(id,x)
+
+
+
+
+
+
+# g=np.array([1,2,3,4])   #single dimension
+# h=np.array([5,6,7,8])
+
+# i=np.concatenate((g,h))    #issay do array ko aik kardia
+# print(i)
+
+
+
+# g=np.array([[1,2],[3,4]])
+# h=np.array([[5,6],[7,8]])
+
+# i=np.concatenate((g,h))    
+# print(i)
+
+
+
+
+
+# g=np.array([[1,2],[3,4]])
+# h=np.array([[5,6],[7,8]])
+
+# i=np.concatenate((g,h), axis=1)       #issay axis aik hojai ga ya change hojai ga
+# print(i)
+
+
+# g=np.array([[1,2],[3,4]])
+# h=np.array([[5,6],[7,8]])
+
+# i=np.stack((g,h))    #issay stack yanay aik k upar aik     
+# print(i)
+
+
+
+
+# g=np.array([[1,2],[3,4]])
+# h=np.array([[5,6],[7,8]])
+
+# i=np.hstack((g,h))    #issay horizontal stack hoga   
+# print(i)
+
+
+# g=np.array([[1,2],[3,4]])
+# h=np.array([[5,6],[7,8]])
+
+# i=np.vstack((g,h))    #issay vertical stack hoga    
+# print(i)
+
+
+
+
+
+
+k=np.array([range(8)])
+print(k)
+
 
