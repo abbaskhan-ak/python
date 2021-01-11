@@ -206,14 +206,14 @@ import numpy as np
 # print(i)
 
 
+
+
+
 # g=np.array([[1,2],[3,4]])
 # h=np.array([[5,6],[7,8]])
 
 # i=np.stack((g,h))    #issay stack yanay aik k upar aik     
 # print(i)
-
-
-
 
 # g=np.array([[1,2],[3,4]])
 # h=np.array([[5,6],[7,8]])
@@ -233,7 +233,111 @@ import numpy as np
 
 
 
-k=np.array([range(8)])
+# k=np.array([2,3,4,5,4,5,6,7,88])
+# print(k)
+# i=np.split(k,3)
+# print(i)
+
+
+# k=np.array([2,3,4,5,4,5,6,7,88,9])
+# print(k)
+# i=np.split(k,2)
+# print(i)
+
+
+
+# k=np.array([2,3,4,5,4,5,6,7,88,9])
+# print(k)
+# i=np.split(k,2)      #do hisso may split hua [0] is ka matlab pehla wala hissa print ho
+# print(i[0])
+
+
+
+
+# k=np.array([2,3,4,5,4,5,6,7,88])
+# print(k)
+# i=np.array_split(k,4)       #issay unequal split hoga
+# print(i)
+
+
+
+
+
+# k=np.array([[1,2,3,4],[5,6,7,8]])
+# l=np.split(k,2)
+# # i=np.array_split(k,3)
+# # print(i)
+# print(l)
+
+
+
+# a= np.array([[[1,2,3],[4,5,6],[7,8,9]],[[10,11,12],[13,14,15],[16,17,18]],[[19,20,21],[22,23,24],[25,26,27]]])
+# l=np.split(a,3)
+# i = np.array_split(a,2)
+# print(i)
+# print(l)
+
+
+
+# g=np.array([[1,2,3],[4,5,6],[7,8,9]])
+# h=np.split(g,3)
+# print(h)
+
+
+# g=np.array([[1,2,3],[4,5,6],[7,8,9]])
+# h=np.split(g,3)
+# print(h[0])
+
+
+
+
+# g=np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16])     #method 1
+# l=g.reshape(4,4)
+# print(l)
+
+
+# print(l[2])
+
+
+# k=np.array([range(16)])    #method 2
+# q=k.reshape(4,4)
+# print(q)
+# print(q[2])
+
+
+
+# o=np.array([[range(16)]])
+# l=o.reshape(4,4)
+# a=np.array([[range(16)]])
+# b=a.reshape(4,4)
+# k=np.hstack((l,b))
+# print(k)
+
+
+
+
+
+
+
+
+o=np.array([[range(27)]])
+l=o.reshape(3,3,3)
+print(l)
+k=np.split(l,3,axis=1)    #axis=1 say har matrix ka row uthai ga
 print(k)
+
+
+
+
+
+
+
+o=np.array([[range(27)]])
+l=o.reshape(3,3,3)
+print(l)
+k=np.split(l,3,axis=2)    #axis=2 say har matrix ka colom uthai ga
+print(k)
+
+
 
 
