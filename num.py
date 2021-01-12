@@ -302,7 +302,9 @@ import numpy as np
 # k=np.array([range(16)])    #method 2
 # q=k.reshape(4,4)
 # print(q)
-# print(q[2])
+# print(q[2])    #issay row axis hogi
+# print(q[:,0])     #issay colom axis hogi
+
 
 
 
@@ -320,11 +322,11 @@ import numpy as np
 
 
 
-o=np.array([[range(27)]])
-l=o.reshape(3,3,3)
-print(l)
-k=np.split(l,3,axis=1)    #axis=1 say har matrix ka row uthai ga
-print(k)
+# o=np.array([[range(27)]])
+# l=o.reshape(3,3,3)
+# print(l)
+# k=np.split(l,3,axis=1)    #axis=1 say har matrix ka row uthai ga
+# print(k)
 
 
 
@@ -332,12 +334,95 @@ print(k)
 
 
 
-o=np.array([[range(27)]])
-l=o.reshape(3,3,3)
-print(l)
-k=np.split(l,3,axis=2)    #axis=2 say har matrix ka colom uthai ga
-print(k)
+# o=np.array([[range(27)]])
+# l=o.reshape(3,3,3)
+# print(l)
+# k=np.split(l,3,axis=2)    #axis=2 say har matrix ka colom uthai ga
+# print(k)
+
+# j=k[1][1][1][0]    #issay hm element axis karrhay ha   0 matrix may 2 colom ka 2 element agar teen number likhay gay to element [] may aiga or agar char number likhay gay tp element khali number aiga
+# print(j)
 
 
+
+#axis 0 y hoga 2D may bhi 3D may bhi
+
+
+# g = np.array([[1,2,3,4],[5,6,7,8],[3,8,4,6],[3,4,5,6]])
+# k=np.split(g, 2 ,axis=1)  #2D may axis 0 pr row milaingay or 1 par colom
+# # print(k)
+# print(k[:][1])
+
+
+
+
+# g=np.array([2,3,4,5,6,7,8,43,7,9])
+# y=np.where(g==7)   #where say elemnt hay ya nhi or uska index pata chalta ha
+# print(y)
+
+# g=np.array([1,3,4,7,8,9,5,4,3,6,7,8])
+# y=np.where(g==7)
+# print(y)
+# print(np.sort(g))    #ascending order hoga sort say
+
+
+import numpy as np
+from numpy import random
+
+# j=random.randint(100)  #1 say 100 may koi print hoga
+# i= random.rand()   # o say 1 koi bhi no print hoga
+# print(i)
+
+
+# q=random.rand(2)
+# print(q)
+
+
+# w=random.randint(100 ,size=5)    #issay   1D hoga 
+# print(w)
+
+
+
+
+
+# r=random.randint(100 ,size=(3,3))     #2D
+# print(r)
+
+
+
+
+# j = random.choice([1,2,7,9,3,4,5])    #ismay jo no hmnay diay ha usmay say random no choose karayga
+# print(j)
+
+
+
+# j = random.choice([1,2,7,9,3,4,5] , size=(2,3))   #jo no hm nay diay uska hi array banay ga
+# print(j)   
+
+
+
+# j= random.choice([1,5,7,9,3],p= [0.2,0.2,0.2,0.2,0.2] ,size=(50))    #p walay ki value 1 k barabar honi chahiyay ismay random choice wali value anay k chances k baray may ha jis ka zida no hoga uskay anay k zida chances
+# print(j)
+
+
+
+
+
+# j= random.choice([1,5,7,9,3],p= [0.6,0.1,0.1,0.1,0.1] ,size=(50,3))    #ismay 1 anay k ziada chances ha q k 0.6 k
+# print(j)
+
+
+
+
+
+
+
+# j= random.choice([1,5,7,9,3],p= [0.1,0.1,0.1,0.6,0.1] ,size=(5,3))    #ismay 9 anay k ziada chances ha q k 0.6 k
+# print(j)
+
+
+
+j = random.normal(size = (3,3))
+print(j)
 
 
