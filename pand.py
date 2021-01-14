@@ -68,16 +68,16 @@ import pandas as pd
 
 
 
-students = {"students_name":["abbas","adil","ali","erdum","ahmad","tariq","noman","hamza","usman","ebad"],
-"physics":[71,88,69,75,25,65,98,78,45,12],
-"chemistry":[50,58,68,72,25,36,96,85,74,45],
-"maths":[74,48,61,71,12,45,78,98,65,32],
-"english":[80,38,64,74,85,25,12,32,65,48]}
-clg = pd.DataFrame(students)
-print(clg)
-print(clg.head(3))     #shuru ki values acces hngi head say
-print(clg.tail(3))      #akhri ki values acces hngi tail say print
-print(clg.info())       #yay information k liyay hota ha
+# students = {"students_name":["abbas","adil","ali","erdum","ahmad","tariq","noman","hamza","usman","ebad"],
+# "physics":[71,88,69,75,25,65,98,78,45,12],
+# "chemistry":[50,58,68,72,25,36,96,85,74,45],
+# "maths":[74,48,61,71,12,45,78,98,65,32],
+# "english":[80,38,64,74,85,25,12,32,65,48]}
+# clg = pd.DataFrame(students)
+# print(clg)
+# print(clg.head(3))     #shuru ki values acces hngi head say
+# print(clg.tail(3))      #akhri ki values acces hngi tail say print
+# print(clg.info())       #yay information k liyay hota ha
 
 
 
@@ -99,5 +99,41 @@ print(clg.info())       #yay information k liyay hota ha
 
 
 
+# a = pd.read_csv("iris.csv")
+# print(a)
+# print(a.info())
+# print(a.to_string())
+# b=a.dropna()   #dropna say null values khatam hojai gi or data clean hojai ga but data reduce hojai ga
+# print(b.info())
+# print(b.to_string())
 
 
+
+# a = pd.read_csv("iris.csv")
+# a.dropna(inplace=True)       #ismay variable assign kiyay baghair hi a may hi dropna karadia
+# print(a.info())
+# a.fillna(120 , inplace=True)   #issay null value fill hojai gi jo value hm daingay i.e 120
+# print(a.to_string())
+# print(a["petal_width"])     #issay jo colom print karana ha us ka naam likhana ha
+# print(a["sepal_length"].loc[5])    #ismay sepal lenght k jo index print karan ho
+# # print(a["sepal_length"].loc[0:5]) 
+# print(a.head(6))
+
+# b=a.drop([149],axis=0)     #issay row khatam hojai ga
+# print(b)
+
+
+# c=a.drop(["petal_width"],axis=1)     #issay colom khatam hojai ga,ismay axis batana zaroori ha
+# print(c)
+
+
+# c=a.drop(["petal_width","sepal_length"],axis=1)     
+# print(c)
+
+
+
+a=pd.read_csv("ak.csv")
+# print(a)
+# print(a.info())
+# x=a.drop(columns=["Period","Group","Series_reference"])    #ismay drop karnay k liyay axis batana zaroori nhi
+# print(x.info())
