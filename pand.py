@@ -110,7 +110,8 @@ import pandas as pd
 
 
 # a = pd.read_csv("iris.csv")
-# a.dropna(inplace=True)       #ismay variable assign kiyay baghair hi a may hi dropna karadia
+# print(a)
+# a.dropna(inplace=True)       #ismay variable assign kiyay baghair hi a may hi dropna karadia inplace isliyay use hota hay takay main data may changes hojai
 # print(a.info())
 # a.fillna(120 , inplace=True)   #issay null value fill hojai gi jo value hm daingay i.e 120
 # print(a.to_string())
@@ -132,8 +133,60 @@ import pandas as pd
 
 
 
-a=pd.read_csv("ak.csv")
+# a=pd.read_csv("ak.csv")
 # print(a)
 # print(a.info())
 # x=a.drop(columns=["Period","Group","Series_reference"])    #ismay drop karnay k liyay axis batana zaroori nhi
 # print(x.info())
+
+
+
+
+# a=pd.read_csv("iris.csv")
+# print(a.info())
+# print(a.to_string())
+# # m=a["petal_width"].loc[[87,91]].mean()       #issay kisi bhi colom ki values ka mean niklay ga
+# # print(m)
+
+# a=pd.read_csv("iris.csv")
+# x=a["petal_width"].mean()
+# a["petal_width"].fillna(x,inplace=True)    #ismay petalwidth may jo null value hogi usmay mean value fill hojai gi
+# print(x)
+# print(a)
+
+
+
+
+
+# a=pd.read_csv("iris.csv")
+# x=a["petal_width"].mode()
+# a["petal_width"].fillna(x,inplace=True)    #ismay petalwidth may jo null value hogi usmay mode value fill hojai gi
+# print(x)
+# print(a)
+
+
+
+
+# a=pd.read_csv("iris.csv")
+# x=a["petal_width"].mode()
+# a["petal_width"].fillna(x,inplace=True)    
+# a["sepal_length"] = pd.to_datetime(a["sepal_length"])    #ismay wo colom datetime format may hojai ga
+# print(x)
+# print(a)
+
+
+
+
+# a=pd.read_csv("iris.csv")
+# print(a["sepal_length"])
+# a.loc[0 , "sepal_length"]=4.2      #issay kisi colom ki specific value change hosakti ha
+# print(a["sepal_length"])
+
+
+
+
+a=pd.read_csv("iris.csv")
+for x in a.index:
+    if a.loc[x,"sepal_length"] >=4.5:     #ismay jo value 4.5 ya ussay bari hngi wo 5 may convert hojai gi
+        a.loc[x,"sepal_length"] =5.0
+print(a)
